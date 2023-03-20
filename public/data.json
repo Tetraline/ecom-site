@@ -1,0 +1,26 @@
+{
+  "1": {
+    "name": "Apple",
+    "price": "0.79"
+  },
+  "2": {
+    "name": "Avocado",
+    "price": "1.20"
+  },
+  "3": {
+    "name": "Banana",
+    "price": "0.29"
+  },
+  "4": {
+    "name": "Mango",
+    "price": "1.09"
+  },
+  "5": {
+    "name": "Onion",
+    "price": "0.10"
+  },
+  "6": {
+    "name": "Tomato",
+    "price": "0.19"
+  }
+}
