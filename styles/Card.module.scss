@@ -1,12 +1,11 @@
 .card {
-  border-radius: 20px;
-  border: 1px solid black;
-  margin: 15px;
-  padding: 15px;
+  border-bottom: 1px solid lightgrey;
+  padding: 30px;
   display: flex;
-  justify-content: space-between;
+  position: relative;
   > .card__body {
     font-weight: bold;
+    margin-left: 20px;
     > h2 {
       font-size: 16px;
     }
@@ -14,4 +13,51 @@
       font-size: 24px;
     }
   }
+
+  > .card__quantity-selector {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 10px;
+    display: flex;
+    > button {
+      color: #1b1f23;
+      background-color: #f1c500;
+      height: 35px;
+      min-width: 40px;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    > .card__button--plus {
+      color: #2d333a;
+      background-color: #f1c500;
+      border: solid 1px #f1c500;
+    }
+    > .card__button--minus {
+      color: #1b1f23;
+      border: solid 1px #4d216d;
+      background-color: #fff;
+    }
+    > .card__button--add-to-basket {
+      color: #2d333a;
+      background-color: #f1c500;
+    }
+    > input {
+      width: 40px;
+      height: 35px;
+      font-size: 14px;
+      text-align: center;
+      box-sizing: border-box;
+      vertical-align: top;
+      border: 1px solid #bbb;
+      border-radius: 5px;
+      padding: 0;
+      margin-left: 3px;
+      margin-right: 3px;
+    }
+  }
+}
+
+.in-basket {
+  background-color: #fffbdf;
 }

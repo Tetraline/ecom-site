@@ -14,7 +14,7 @@ const Card = ({ product, handleBasketChange }) => {
     }
   };
   return (
-    <div className={styles.card}>
+    <div className={`${styles.card} ${quantity ? styles["in-basket"] : ""}`}>
       <div className={styles.card__img}>
         <Image
           src={`/${product.name}.jpg`}
@@ -27,14 +27,31 @@ const Card = ({ product, handleBasketChange }) => {
         <h2>{product.name}</h2>
         <p>£{product.price}</p>
       </div>
-      <div className="card__quantity-selector">
-        <button onClick={handleIncrement} className="card__button">
-          ➕
-        </button>
-        <p>{quantity}</p>
-        <button onClick={handleDecrement} className="card__button">
-          ➖
-        </button>
+      <div className={styles["card__quantity-selector"]}>
+        {quantity ? (
+          <>
+            <button
+              onClick={handleDecrement}
+              className={styles["card__button--minus"]}
+            >
+              -
+            </button>
+            <input value={quantity} readOnly type="text" />
+            <button
+              onClick={handleIncrement}
+              className={styles["card__button--plus"]}
+            >
+              +
+            </button>
+          </>
+        ) : (
+          <button
+            onClick={handleIncrement}
+            className={styles["card__button--add-to-basket"]}
+          >
+            Add to basket
+          </button>
+        )}
       </div>
     </div>
   );
