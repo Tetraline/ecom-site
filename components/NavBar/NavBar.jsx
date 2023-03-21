@@ -5,13 +5,22 @@ import { useState } from "react";
 
 const NavBar = ({ basket, productData }) => {
   const [showBasket, setShowBasket] = useState(false);
+  const toggleShowBasket = () => {
+    setShowBasket(!showBasket);
+  };
   return (
     <nav className={styles.nav}>
       <h1 className="nav__item">🛵fast</h1>
-      <button onClick={() => setShowBasket(!showBasket)}>
+      <button onClick={toggleShowBasket}>
         <Image src="/basket.png" alt="Basket" width="20" height="20"></Image>
       </button>
-      {showBasket && <Basket basket={basket} productData={productData} />}
+      {showBasket && (
+        <Basket
+          basket={basket}
+          productData={productData}
+          toggleShowBasket={toggleShowBasket}
+        />
+      )}
     </nav>
   );
 };
