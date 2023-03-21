@@ -7,14 +7,7 @@ const nextConfig = {
     includePaths: [path.join(__dirname, "styles")],
   },
   images: {
-    remotePatterns: [
-      {
-        protocol: "http",
-        hostname: "placekitten.com",
-        port: "",
-        pathname: "/200/300",
-      },
-    ],
+    path: "/",
   },
 };
 
