@@ -17,7 +17,7 @@ const Card = ({ product, handleBasketChange }) => {
     <div className={`${styles.card} ${quantity ? styles["in-basket"] : ""}`}>
       <div className={styles.card__img}>
         <Image
-          src={`/${product.name}.jpg`}
+          src={`/${product.name.toLowerCase()}.jpg`}
           width="100"
           height="100"
           alt={`Picture of ${product.name}`}
